@@ -16,4 +16,5 @@
 
     <!-- Custom styles for this template -->
     <link href="styles/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
