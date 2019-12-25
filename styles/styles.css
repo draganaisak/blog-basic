@@ -1,0 +1,13 @@
+* {
+    font-size: 14px !important;
+ }
+ .blog-masthead {
+    background-color: #B34848 !important;
+ }
+ .blog-post-title, h1, h2, h3, h4, h5, h6 {
+    color: #B34848 !important;
+ }
+
+ .blog-post-title:hover {
+     text-decoration: underline;
+ }
