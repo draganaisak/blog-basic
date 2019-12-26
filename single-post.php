@@ -18,24 +18,24 @@ $singlePost = $statement->fetch();
 
 ?>
 
-    <main role="main" class="container">
+<main role="main" class="container">
 
-        <div class="row">
-            <div class="blog-post">
-                <h2 class="blog-post-title"><?php echo $singlePost['title'] ?></h2>
-                <p class="blog-post-meta"><?php echo $singlePost['created_at'] ?> <a href="#"><?php echo $singlePost['author'] ?></a></p>
+    <div class="row">
+        <div class="blog-post">
+            <h2 class="blog-post-title"><?php echo $singlePost['title'] ?></h2>
+            <p class="blog-post-meta"><?php echo $singlePost['created_at'] ?> <a href="#"><?php echo $singlePost['author'] ?></a></p>
 
-                <p><?php echo $singlePost['body'] ?></p>
+            <p><?php echo $singlePost['body'] ?></p>
 
-                <hr>
-                <?php include 'comments.php'; ?>
+            <button type="button" onclick="hideComments()" class="btn btn-default button-hide">Hide Comments</button>
+            <hr>
+            <?php include 'comments.php'; ?>
 
-            </div><!-- /.blog-post -->
+        </div><!-- /.blog-post -->
+        <?php include 'includes/sidebar.php'; ?>
+    </div>
 
-            <?php include 'includes/sidebar.php'; ?>
-        </div>
-
-    </main>
+</main>
 
 <?php include 'includes/footer.php'; ?>
 
