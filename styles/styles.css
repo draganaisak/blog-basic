@@ -11,3 +11,8 @@
  .blog-post-title:hover {
      text-decoration: underline;
  }
+
+ /*---------comments------------*/
+.hide {
+    display: none;
+}
