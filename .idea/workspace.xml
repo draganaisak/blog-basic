@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78bfdbb9-3a36-4143-8d22-83e33ca5a0da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/create-comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1510149276575</updated>
       <workItem from="1510149277768" duration="10000" />
-      <workItem from="1577285580840" duration="23828000" />
+      <workItem from="1577285580840" duration="27273000" />
+      <workItem from="1577436345092" duration="270000" />
     </task>
     <servers />
   </component>
@@ -67,10 +69,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="976" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577285582091">
+    <state x="976" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1577436346848">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="976" y="345" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577285582091" />
+    <state x="976" y="345" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577436346848" />
+    <state x="1347" y="235" width="672" height="676" key="search.everywhere.popup" timestamp="1577436602470">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1347" y="235" width="672" height="676" key="search.everywhere.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1577436602470" />
   </component>
   <component name="masterDetails">
     <states>
