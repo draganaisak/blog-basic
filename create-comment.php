@@ -23,6 +23,6 @@ catch (PDOException $e) {
     echo $e->getMessage();
 }
 
-header("Location: http://localhost:8000/single-post.php?post_id=$post_id"); //refresuje stranicu sa prikazom i novog komentara
+header("Location: http://localhost:8000/single-post.php?post_id=$post_id");
 
 ?>
