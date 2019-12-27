@@ -18,9 +18,15 @@ $comments = $statement->fetchAll();
         <li>
             <h6><?php echo  $comment['author']; ?></h6>
             <p><?php echo $comment['text']; ?></p>
+            <form method="post" action="delete-comment.php" >
+                <button type="submit" class="btn btn-default">Delete</button>
+                <input type="hidden" value="<?php echo $comment['id']; ?>" name="id"/>
+                <input type="hidden" value="<?php echo $comment['post_id']; ?>" name="post_id"/>
+            </form>
         </li>
         <hr>
     <?php endforeach ?>
+
 </ul>
 
 
@@ -30,7 +36,7 @@ $comments = $statement->fetchAll();
 
     function hideComments() {
         if(button.innerHTML == "Show Comments") {
-            comments.classList.remove('hide');  //upravlja klasom na komentarima
+            comments.classList.remove('hide');  //upravlja klasom hide na komentarima
             button.innerHTML = "Hide Comments"  //menja naziv buttona u Hide comments
         } else {
             comments.className = "hide";
@@ -38,4 +44,5 @@ $comments = $statement->fetchAll();
         }
     }
 </script>
+
 </main>

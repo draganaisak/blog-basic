@@ -1,22 +1,28 @@
 <?php
 
-require 'connection.php';
-$id = $_POST('id');
+session_start();
 
+include 'connection.php';
+
+$post_id = $_POST['post_id'];
+$author = $_POST['author'];
 $text = $_POST['text'];
 
-if (isset($_POST['author'])) {
-    $author = $_POST['author'];
-} else {
-    header("Location: http://localhost:8000/single-post.php?post_id=$id&required=false");
+if (empty($author) or empty($text)) {
+    $_SESSION["validation_error"] = "All fields are required";
+    header("Location: http://localhost:8000/single-post.php?post_id=$post_id");
     exit;
 }
 
-$commentInsert = "INSERT INTO comments (author, text, post_id) VALUES ('{$author}', '{$text}', '{$id}'";
-$statement = $connection->prepare($commentInsert);
-$statement->execute();
-$statement->setFetchMode(PDO::FETCH_ASSOC);
+try {
+    $commentInsert = "INSERT INTO comments (author, text, post_id) VALUES ('{$author}', '{$text}', {$post_id})";
+    $statement = $connection->prepare($commentInsert);
+    $statement->execute();
+}
+catch (PDOException $e) {
+    echo $e->getMessage();
+}
 
-
+header("Location: http://localhost:8000/single-post.php?post_id=$post_id"); //refresuje stranicu sa prikazom i novog komentara
 
 ?>
