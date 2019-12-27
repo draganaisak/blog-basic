@@ -31,6 +31,24 @@ $inputError = "";
 
             <p><?php echo $singlePost['body'] ?></p>
 
+            <form method="GET" action="delete-post.php" name="deletePostForm">
+                <button id="delete" class="btn btn-primary" onclick="confirmDelete()">Delete this post</button>
+                <input type="hidden" value="<?php echo $_GET['post_id']; ?>" name="id"/>
+            </form>
+
+            <script>
+                document.getElementById("delete").addEventListener("click", function(event){
+                    event.preventDefault()
+                    if(window.confirm("Do you really want to delete this post?")){
+                        document.deletePostForm.submit();
+                    }
+                });
+            </script>
+
+            <br>
+            <p>Write comment</p>
+            <br>
+
             <form action="create-comment.php" method="post">
                 <input type="text" name="author" placeholder="Write your name" style="display:block; margin-bottom:1rem; padding:0.5rem"/>
                 <textarea name="text" rows="5" cols="60" placeholder="Write your comment" style="display:block; margin-bottom:1rem"></textarea>
