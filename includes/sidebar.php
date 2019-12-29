@@ -1,4 +1,4 @@
-<?php require 'connection.php'; ?>
+<?php require_once 'connection.php'; ?>
 
 <?php
 $sql = "SELECT * FROM posts ORDER BY created_at DESC LIMIT 5";

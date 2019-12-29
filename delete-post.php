@@ -1,6 +1,6 @@
 <?php
 
-include("connection.php");
+require_once 'connection.php';
 $id = $_GET['id'];
 
 $sqlDeletePost = "DELETE FROM posts WHERE id = $id ;";

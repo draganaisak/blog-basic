@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'connection.php';
+require_once 'connection.php';
 
 
 $title = $_POST['title'];

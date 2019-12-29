@@ -1,16 +1,20 @@
 <?php
 
-require 'connection.php';
+require_once 'connection.php';
 
 $postId = $_GET['post_id'];
-$sql = "SELECT * FROM comments WHERE post_id='$postId'";
-$statement = $connection->prepare($sql);
-$statement->execute();
-$statement->setFetchMode(PDO::FETCH_ASSOC);
-$comments = $statement->fetchAll();
+$sqlComment = "SELECT * FROM comments WHERE post_id='$postId'";
+$statementComment = $connection->prepare($sqlComment);
+$statementComment->execute();
+$statementComment->setFetchMode(PDO::FETCH_ASSOC);
+$comments = $statementComment->fetchAll();
 
 
 ?>
+
+<button type="button" onclick="hideComments()" class="btn btn-default button-hide">Hide Comments</button>
+<br>
+<br>
 
 <ul id="hide">
     <?php foreach ($comments as $comment): ?>
@@ -18,12 +22,12 @@ $comments = $statement->fetchAll();
         <li>
             <h6><?php echo  $comment['author']; ?></h6>
             <p><?php echo $comment['text']; ?></p>
-            <form method="post" action="delete-comment.php" >
-                <button type="submit" class="btn btn-default">Delete</button>
-                <input type="hidden" value="<?php echo $comment['id']; ?>" name="id"/>
-                <input type="hidden" value="<?php echo $comment['post_id']; ?>" name="post_id"/>
-            </form>
         </li>
+        <form method="post" action="delete-comment.php">
+            <button type="submit" class="btn btn-default">Delete</button>
+            <input type="hidden" value="<?php echo $comment['id']; ?>" name="id"/>
+            <input type="hidden" value="<?php echo $comment['post_id']; ?>" name="post_id"/>
+        </form>
         <hr>
     <?php endforeach ?>
 
@@ -36,13 +40,11 @@ $comments = $statement->fetchAll();
 
     function hideComments() {
         if(button.innerHTML == "Show Comments") {
-            comments.classList.remove('hide');  //upravlja klasom hide na komentarima
-            button.innerHTML = "Hide Comments"  //menja naziv buttona u Hide comments
+            comments.classList.remove('hide');
+            button.innerHTML = "Hide Comments"
         } else {
             comments.className = "hide";
             button.innerHTML = "Show Comments"
         }
     }
 </script>
-
-</main>

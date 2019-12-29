@@ -1,5 +1,5 @@
 <?php
-require 'connection.php';
+require_once 'connection.php';
 
 $sql = "SELECT * FROM posts ORDER BY created_at DESC";
 $statement = $connection->prepare($sql);

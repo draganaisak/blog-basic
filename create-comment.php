@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'connection.php';
+require_once 'connection.php';
 
 $post_id = $_POST['post_id'];
 $author = $_POST['author'];

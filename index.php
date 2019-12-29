@@ -1,8 +1,8 @@
-<?php include 'includes/head.php'; ?>
+<?php require_once 'includes/head.php'; ?>
 
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php require_once 'includes/header.php'; ?>
 
 <main role="main" class="container">
 
@@ -10,7 +10,7 @@
 
         <div class="col-sm-8 blog-main">
 
-            <?php include 'posts.php' ?>
+            <?php require_once 'posts.php' ?>
 
             <nav class="blog-pagination">
                 <a class="btn btn-outline-primary" href="#">Older</a>
@@ -19,13 +19,13 @@
 
         </div><!-- /.blog-main -->
 
-        <?php include 'includes/sidebar.php'; ?>
+        <?php require_once 'includes/sidebar.php'; ?>
 
     </div><!-- /.row -->
 
 </main><!-- /.container -->
 
-<?php include 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>
 
 </body>
 </html>
